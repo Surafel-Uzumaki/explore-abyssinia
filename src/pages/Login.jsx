@@ -3,17 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { loginUser } from '../api/api';
 import EthiopiaFacts from '../components/register/EthiopiaFacts';
+import lalibela from '../assets/img22.jpg';
+import lakeTana from '../assets/img22.jpg';
+import simien from '../assets/img23.jpg';
+import danakil from '../assets/img24.jpg';
 
-const BG_IMAGES = [
-  'https://images.pexels.com/photos/16641472/pexels-photo-16641472.jpeg', // Danakil
-  'https://images.pexels.com/photos/3263784/pexels-photo-3263784.jpeg', // Lalibela
-  'https://images.pexels.com/photos/17917322/pexels-photo-17917322.jpeg', // Simien
-  'https://images.pexels.com/photos/13160487/pexels-photo-13160487.jpeg', // Lake Tana
-];
+// High-quality Ethiopian background images (rotate every 8s)
+const BG_IMAGES = [lalibela, simien, danakil, lakeTana];
+
 const BG_LABELS = [
-  'Danakil Depression',
   'Lalibela',
   'Simien Mountains',
+  'Danakil Depression',
   'Lake Tana',
 ];
 

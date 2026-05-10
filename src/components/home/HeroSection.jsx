@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import heroImage from '../../assets/img22.jpg';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -7,8 +8,7 @@ const HeroSection = () => {
     <section
       className="relative h-screen flex items-center overflow-hidden"
       style={{
-        backgroundImage:
-          "url('https://unsplash.com/photos/a-couple-of-people-sitting-on-top-of-a-hill-1fzi1YLQBBo')",
+        backgroundImage: `url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

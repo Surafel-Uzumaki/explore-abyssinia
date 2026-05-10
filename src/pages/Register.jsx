@@ -5,14 +5,13 @@ import RegisterForm from '../components/register/RegisterForm';
 import OtpStep from '../components/register/OtpStep';
 import SuccessModal from '../components/register/SuccessModal';
 import EthiopiaFacts from '../components/register/EthiopiaFacts';
+import lalibela from '../assets/img22.jpg';
+import lakeTana from '../assets/img22.jpg';
+import simien from '../assets/img23.jpg';
+import danakil from '../assets/img24.jpg';
 
 // High-quality Ethiopian background images (rotate every 8s)
-const BG_IMAGES = [
-  'https://images.pexels.com/photos/3263784/pexels-photo-3263784.jpeg', // Lalibela
-  'https://images.pexels.com/photos/17917322/pexels-photo-17917322.jpeg', // Simien Mts
-  'https://images.pexels.com/photos/16641472/pexels-photo-16641472.jpeg', // Danakil
-  'https://images.pexels.com/photos/13160487/pexels-photo-13160487.jpeg', // Lake Tana
-];
+const BG_IMAGES = [lalibela, simien, danakil, lakeTana];
 
 const BG_LABELS = [
   'Lalibela',
@@ -20,7 +19,6 @@ const BG_LABELS = [
   'Danakil Depression',
   'Lake Tana',
 ];
-
 export default function Register() {
   const [step, setStep] = useState('form'); // 'form' | 'otp'
   const [formData, setFormData] = useState(null);

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-// ── Validation ────────────────────────────────────────────────
 const validators = {
   firstName: (v) =>
     !v.trim()
@@ -15,7 +14,6 @@ const validators = {
         ? 'Min 2 characters'
         : '',
   phone: (v) => {
-    // Must match +251XXXXXXXXX (9 digits after +251)
     if (!v) return 'Phone number is required';
     if (!/^\+251[79]\d{8}$/.test(v))
       return 'Format: +251911234567 (9 digits after +251)';
@@ -80,7 +78,6 @@ const EyeIcon = ({ show }) => (
   </svg>
 );
 
-// ── Component ─────────────────────────────────────────────────
 const RegisterForm = ({ onSuccess, error: apiError, loading }) => {
   const [data, setData] = useState({
     firstName: '',
@@ -101,9 +98,8 @@ const RegisterForm = ({ onSuccess, error: apiError, loading }) => {
   };
 
   const handlePhoneChange = (val) => {
-    // Always keep +251 prefix
     if (!val.startsWith('+251')) return;
-    // Only allow digits after prefix, max 9 digits
+
     const suffix = val.slice(4).replace(/\D/g, '').slice(0, 9);
     set('phone', '+251' + suffix);
   };
